@@ -11,7 +11,7 @@ use drm_ffi as ffi;
 
 /// A handle to a connector
 #[repr(transparent)]
-#[derive(Copy, Clone, Hash, PartialEq, Eq)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq, PartialOrd, Ord)]
 pub struct Handle(control::RawResourceHandle);
 
 // Safety: Handle is repr(transparent) over NonZeroU32

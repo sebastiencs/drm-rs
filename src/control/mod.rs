@@ -1247,7 +1247,7 @@ impl ResourceHandles {
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 /// A filter that can be used with a [`ResourceHandles`] to determine the set of
 /// Crtcs that can attach to a specific encoder.
-pub struct CrtcListFilter(u32);
+pub struct CrtcListFilter(pub u32);
 
 /// Resolution and timing information for a display mode.
 #[repr(transparent)]
